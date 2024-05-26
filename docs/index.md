@@ -1,5 +1,6 @@
-<h1 id="itemcollab">ItemCollab</h1>
-<p>SpriteCollab, but for Item Sprites.</p>
+#ItemCollab
+
+SpriteCollab, but for Item Sprites.
 
 <div id="gallery"></div>
 
