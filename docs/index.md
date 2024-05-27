@@ -2,7 +2,7 @@
 
 <div id="sprites"></div>
 <script>
-  async function fetchimages(path = 'https:<!--api.github.com/repos/MilesFarber/ItemCollab/contents/items') {
+  async function fetchimages(path = 'https://api.github.com/repos/MilesFarber/ItemCollab/contents/items') {
     const response = await fetch(path);
     const data = await response.json();
     for (const file of data) {
