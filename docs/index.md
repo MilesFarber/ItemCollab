@@ -42,7 +42,7 @@ async function processFolder(folder) {
           console.error('Error loading image: ' + file.name);
         };
         img.alt = file.name;
-        img.src = file.download_url; // Set src after onload to ensure the event is captured
+        img.src = file.download_url;
       }
     }
   } catch (error) {
