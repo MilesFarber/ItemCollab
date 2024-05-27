@@ -3,7 +3,7 @@
 <div id="sprites"></div>
 <script>
 try {
-async function fetchImages(path = 'https://api.github.com/repos/MilesFarber/ItemCollab/contents/items') {
+async function fetchImages(path = 'https://api.github.com/repos/MilesFarber/ItemCollab/contents/items') { try {
   const response = await fetch(path);
   const data = await response.json();
   const sprites = document.getElementById('sprites');
@@ -25,7 +25,7 @@ async function fetchImages(path = 'https://api.github.com/repos/MilesFarber/Item
       await fetchImages(file.url);
     }
   }
-}
+} catch (error) { console.error('Caught fetchImages error: ' + error.message); } }
 window.onload = fetchImages;
 } catch (error) {
   console.error('Caught error: ' + error.message);
