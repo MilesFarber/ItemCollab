@@ -24,7 +24,7 @@ try {
       img.alt = file.name;
     });
   }
-  console.log('The fact that functions automatically use the windowonload event object as a parameter when the parameter is empty, WITHOUT the devs consent, is exactly why javascript should have never existed')
+  console.log('The fact that functions automatically use the windowonload event object as a parameter when the parameter is empty, WITHOUT the devs consent, is exactly why javascript should have never existed');
   window.onload = function() { fetchImages(); };
 } catch (error) { console.error('Caught error: ' + error.message); }
 </script>
