@@ -20,10 +20,14 @@ async function fetchImages() {
 async function processFolder(folder) {
   try {
     const folderResponse = await fetch(folder.url);
-    const folderData = await folderResponse.json();
+    const contentType = folderResponse.headers.get('content-type');
     if (!folderResponse.ok) {
       throw new Error('Network response was not ok.');
     }
+    if (!contentType || !contentType.includes('application/json')) {
+      throw new TypeError('Expected JSON response but received:', contentType);
+    }
+    const folderData = await folderResponse.json();
     for (const file of folderData) {
       if (file.type === 'dir') {
         await processFolder(file);
