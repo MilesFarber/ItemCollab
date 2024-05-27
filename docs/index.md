@@ -7,7 +7,7 @@ SpriteCollab, but for Item Sprites.
 <script>
   <!-- This function fetches the list of files in the 'items' directory -->
   async function fetchImages() {
-    const response = await fetch('https://api.github.com/repos/MilesFarber/ItemCollab/contents/items');
+    const response = await fetch('https://api.github.com/repos/MilesFarber/ItemCollab/items');
     const data = await response.json();
     
     <!-- If image is PNG -->
