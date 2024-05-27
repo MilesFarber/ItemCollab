@@ -4,7 +4,7 @@
 <script>
 try {
   async function fetchImages(currentfolder = 'items') {
-    console.log('https://api.github.com/repos/MilesFarber/ItemCollab/contents/' + currentfolder)
+    console.log('https://api.github.com/repos/MilesFarber/ItemCollab/contents/' + currentfolder);
     const response = await fetch('https://api.github.com/repos/MilesFarber/ItemCollab/contents/' + currentfolder);
     const data = await response.json();
     const pngFiles = data.filter(file => file.name.endsWith('.png'));
