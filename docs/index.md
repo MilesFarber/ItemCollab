@@ -1,5 +1,8 @@
 # ItemCollab
 
+[Download ALL Item Sprites at once!](https://downgit.github.io/#/home?url=https://github.com/MilesFarber/ItemCollab/tree/trainer/items){: .btn }
+[GitHub Repository + Placeholder License](https://github.com/MilesFarber/ItemCollab?tab=License-1-ov-file){: .btn }
+
 <div id="sprites"></div>
 <script>
 try {
