@@ -8,6 +8,9 @@ try {
     const folderDiv = document.createElement('div');
     folderDiv.id = currentfolder;
     parentElement.appendChild(folderDiv);
+    const title = document.createElement('h3');
+    title.textContent = currentfolder;
+    folderDiv.appendChild(title);
     console.log('https://api.github.com/repos/MilesFarber/ItemCollab/contents/' + currentfolder);
     const response = await fetch('https://api.github.com/repos/MilesFarber/ItemCollab/contents/' + currentfolder);
     const data = await response.json();
