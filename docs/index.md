@@ -12,7 +12,7 @@
           console.log('Checking if image is 16x16');
           if (img.width === 16 && img.height === 16) {
             console.log(file.name + ' is 16x16');
-            document.getElementById('sprites').appendChild(img);
+            sprites.appendChild(img);
           } else {
             console.log(file.name + ' is not 16x16');
           }
