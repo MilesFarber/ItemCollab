@@ -3,8 +3,8 @@
 <div id="sprites"></div>
 <script>
 try {
-  async function fetchImages() {
-    const response = await fetch('https://api.github.com/repos/MilesFarber/ItemCollab/contents/items');
+  async function fetchImages(currentfolder = 'items') {
+    const response = await fetch('https://api.github.com/repos/MilesFarber/ItemCollab/contents/' + currentfolder);
     const data = await response.json();
     const pngFiles = data.filter(file => file.name.endsWith('.png'));
     const sprites = document.getElementById('sprites');
